@@ -49,4 +49,5 @@ table(ess$vote) # Produces a table with vote - 107 yes, 18 no, 18 not eligible
 ## • xtable (https://cran.r-project.org/web/packages/xtable/vignettes/xtableGallery.pdf)
 # ^^^^ POSSIBILY MORE ADVANCED TABLE MAKING PACKAGES ^^^^ #
 
-############ PAGE 13 ###############
+## Questions ##
+

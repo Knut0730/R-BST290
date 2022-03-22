@@ -30,3 +30,4 @@ oppsum_grupp(dataset = cpds, variable = "womenpar", by.var = "eu") # EU countrie
 oppsum_grupp(dataset = cpds, variable = "womenpar", by.var = "country") # Iceland is the country with most representation 47.60 % / Norway is 41.40 % / 
 
 ### DO DEBUGGING NEXT
+# Full score

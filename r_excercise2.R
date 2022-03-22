@@ -7,7 +7,7 @@ library(readxl) #Loads the package "readxl" to read Excel files.
 library(remotes) #Loads the package "remotes" to be able to download packages from Github.
 library(bst290) #Loads the course specific "bst290" package (from GitHub)
 
-practiceStatistics() #Tests if the package works - PASSED
+#practiceStatistics() #Tests if the package works - PASSED
 cpds_excel <- read_excel("~/Insync/258768@uis.no/OneDrive Biz/UiS_4semester/Intro_R/CPDS_dataset.xlsx") # Creates cpds object which is the dataset in Excel.
 cpds_stata <- read_dta("https://www.cpds-data.org/images/Update2021/CPDS_1960-2019_Update_2021.dta")
 polvio <- read_sav("http://www.systemicpeace.org/inscr/MEPV2012ex.sav") #Loads the dataset - major episodes of political violence
@@ -28,3 +28,11 @@ show_rounds() #bonus; this is all the rounds. So Norway is included inn all the 
 ess_no <- import_country(country = "Norway", rounds = 1) # Creates an object called ess_no which includes Norways observations from round 1.
 
 ################################ ########################### ########################
+
+# Classrom excerise
+
+Ukraine_conflict <- as.data.frame(read.csv("https://data.humdata.org/dataset/bb30eaae-306d-4d53-8978-998eb8b9a06e/resource/d4c483d4-e8dc-4246-9b6c-3aef8a7b16c6/download/conflict_data_ukr.csv"))
+View(Ukraine_conflict)
+
+library(rsdmx)
+# try it : http://stats.oecd.org/ - problem with website.
