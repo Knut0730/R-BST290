@@ -4,6 +4,7 @@
 
 # 2 - Loading the bst290 package and the practice dataset#####
 library(bst290)
+library(tidyverse)
 data(ess) #!ONLY 22 VARIABLES NOT 38.
 
 # 3 - A first glimpse####
