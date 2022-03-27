@@ -37,3 +37,8 @@ df <- data.frame(Movie, Result)
 
 ## 4 ####
 
+# Selects the idno, agea and gndr from ess dataset, and only Females from gender ages 35 and up.
+ess_female_old <- ess %>%
+  select(idno, agea, gndr) %>%
+  filter(gndr == "Female" & agea > 35)
+# Shortcut for pipe operator: CTRL + SHIFT + P %>% 
