@@ -1,0 +1,39 @@
+# r_exercises4.R
+
+# Exercise 1
+library(haven)
+library(tidyverse) # Why did Carlo not tell us to load this...
+library(bst290)
+
+cpds <- read_dta("https://www.cpds-data.org/images/Update2021/CPDS_1960-2019_Update_2021.dta")
+
+# Exercise 2
+# Selects country, year, women participation and government left tendency with Norway as a filter.
+cpds_trimmed <- cpds %>% 
+  select(country,
+         year,
+         womenpar,
+         gov_left1) %>% 
+  filter(country == "Norway")
+
+# Exercise 3
+# Selects country and voter turnout grouped by country - outputs mean of voter turnout
+cpds %>% 
+  select(country,
+         vturn) %>% 
+  group_by(country)
+summarize(mean(vturn, na.rm = T))
+
+# Exercise 4
+# Selects country, year, unemployment rate and the rate of inflation
+  # Filters to only Norway
+  # Mutates unemployment rate and the rate of inflation together with a new variable "Misery Index"
+cpds %>% 
+  select(country,
+         year,
+         unemp,
+         inflation) %>% 
+  filter(country == "Norway") %>% 
+  mutate("Misery Index" = unemp + inflation)
+
+###########
