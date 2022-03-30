@@ -2,7 +2,7 @@
 
 # Exercise 1
 library(haven)
-library(tidyverse) # Why did Carlo not tell us to load this...
+library(tidyverse)
 library(bst290)
 
 cpds <- read_dta("https://www.cpds-data.org/images/Update2021/CPDS_1960-2019_Update_2021.dta")
@@ -21,8 +21,8 @@ cpds_trimmed <- cpds %>%
 cpds %>% 
   select(country,
          vturn) %>% 
-  group_by(country)
-summarize(mean(vturn, na.rm = T))
+  group_by(country) %>% 
+  summarize(mean_vturn = mean(vturn, na.rm = T))
 
 # Exercise 4
 # Selects country, year, unemployment rate and the rate of inflation
