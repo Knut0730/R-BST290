@@ -23,4 +23,7 @@ new_vec <- c(x,y) # Create new_vec vector with x,y objects.
 new_vec # prints the elements of new_vec
 long_vec <- c(x,y,vaccine_efficacy) # X,Y, and vacine efficacy combined in a vector
 pets_new <- c(pets,"horse") # Print vector "pets" and add "horse" too.
-pets <- c("horse") # replace pets with only horse.
+
+# Correction
+# pets <- c("horse") # replace pets with only horse.
+pets <- c(pets,"horse") # you want the same as just before, but overwrite 'pets' instead of creating 'pets_new'
