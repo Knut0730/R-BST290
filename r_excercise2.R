@@ -13,7 +13,7 @@ cpds_stata <- read_dta("https://www.cpds-data.org/images/Update2021/CPDS_1960-20
 polvio <- read_sav("http://www.systemicpeace.org/inscr/MEPV2012ex.sav") #Loads the dataset - major episodes of political violence
 abortion_excel <- read_excel('/home/knut/Insync/258768@uis.no/OneDrive Biz/UiS_4semester/Intro_R/Abortion_Laws_Indicators.xls')
 
-# Passed tutorial with full marks
+# Passed tutorial with full marks [Indeed. CK]
 
 # Appendix tasks
 library(essurvey) #Loads the european social study survey.

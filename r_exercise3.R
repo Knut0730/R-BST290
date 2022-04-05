@@ -38,4 +38,4 @@ oppsum_grupp(dataset = cpds,
              by.var = "country") # Iceland is the country with most representation 47.60 % / Norway is 41.40 % / 
 
 ### DO DEBUGGING NEXT
-# Full score
+# Full score [Indeed, looks all correct. Good job! CK]

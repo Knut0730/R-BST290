@@ -14,7 +14,7 @@ cpds_trimmed <- cpds %>%
          year,
          womenpar,
          gov_left1) %>% 
-  filter(country == "Norway")
+  filter(country == "Norway") # [Would not have been necessary to store the 'trimmed' version, but this also not wrong.]
 
 # Exercise 3
 # Selects country and voter turnout grouped by country - outputs mean of voter turnout
@@ -22,7 +22,7 @@ cpds %>%
   select(country,
          vturn) %>% 
   group_by(country) %>% 
-  summarize(mean_vturn = mean(vturn, na.rm = T))
+  summarize(mean_vturn = mean(vturn, na.rm = T)) # [Good!]
 
 # Exercise 4
 # Selects country, year, unemployment rate and the rate of inflation
@@ -34,6 +34,6 @@ cpds %>%
          unemp,
          inflation) %>% 
   filter(country == "Norway") %>% 
-  mutate("Misery Index" = unemp + inflation)
+  mutate(misery_index = unemp + inflation) # not wrong, but I'd avoid using 'proper' names that contain spaces for variables; 'misery_index' should always work in later operations, "Misery Index" might cause trouble.
 
 ###########

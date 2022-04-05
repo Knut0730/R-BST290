@@ -17,10 +17,13 @@ ggplot(data = ess,
         ylab("Number of observations") +
         theme_bw()
 
+# Missed a spot! What happens if you try out different bin numbers?
+
 # Exercise 3 - Bar graph
 ggplot(data = ess,
        aes(x = vote)) +
         geom_bar(color = "black") +
-        xlab("Did you vote in the last election? Yes/No/Not eligible to vote") +
+        xlab("Did you vote in the last election?") + # The categories should go as labels on the x-axis; see example below
+        scale_x_discrete(labels = c("Ja","Nei","Ikke stemmeberettiget")) +
         ylab("Number of observations") +
         theme_bw()
